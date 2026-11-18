@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+  --color-sand: #fdf8ec;
+
+  --animate-fade: fade 0.7s ease-out both;
+  --animate-drift: drift 60s ease-in-out infinite alternate;
+  --animate-drift-slow: drift 90s ease-in-out infinite alternate-reverse;
+  --animate-sway: sway 40s linear infinite;
+
+  @keyframes fade {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes drift {
+    from { transform: translateX(0); }
+    to { transform: translateX(60px); }
+  }
+  @keyframes sway {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-sand);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Markdown description styles */
+.md {
+  line-height: 1.75;
+}
+.md > * + * {
+  margin-top: 0.85em;
+}
+.md h1, .md h2, .md h3, .md h4 {
+  font-weight: 700;
+  color: var(--color-slate-800);
+}
+.md h2 { font-size: 1.2em; }
+.md h3, .md h4 { font-size: 1.05em; }
+.md ul { list-style: disc; padding-left: 1.25em; }
+.md ol { list-style: decimal; padding-left: 1.25em; }
+.md li + li { margin-top: 0.3em; }
+.md strong { font-weight: 700; color: var(--color-slate-800); }
+.md a { color: var(--color-sky-600); text-decoration: underline; text-underline-offset: 3px; }
+.md code {
+  font-size: 0.9em;
+  background: var(--color-sky-50);
+  padding: 0.1em 0.35em;
+  border-radius: 0.4em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
