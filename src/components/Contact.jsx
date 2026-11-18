@@ -23,8 +23,8 @@ export default function Contact() {
       <Frond className="absolute -right-8 bottom-0 w-40 -rotate-12 sm:w-56" color="#34d399" />
 
       <Reveal className="relative mx-auto max-w-3xl px-6 pb-24 pt-16 text-center">
-        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-700/80">Say hello</p>
-        <h2 className="mt-2 text-3xl font-extrabold text-slate-800 sm:text-4xl">Let's connect</h2>
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-700/80">Thanks for stopping by</p>
+        <h2 className="mt-2 text-3xl font-extrabold text-slate-800 sm:text-4xl">I'd be glad to hear from you</h2>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
